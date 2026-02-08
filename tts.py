@@ -20,16 +20,18 @@ from config import (
 def build_tts_text(poem):
     """Build the text sent to ElevenLabs TTS for a poem.
 
-    Adds a spoken intro ("Title, by Author."), a pause before the body,
-    and pauses between stanzas (double newlines).
+    Collapses all line breaks into spaces so the model reads the poem as
+    flowing prose, finding natural pauses from punctuation rather than
+    resetting cadence at every line break. A stanza break (double newline)
+    separates the intro from the body.
     """
     intro = f'{poem["title"]}, by {poem["author"]}.'
     body = poem["body"]
 
-    # Replace stanza breaks (2+ blank lines) with SSML break tags
-    body = re.sub(r"\n\s*\n", '\n<break time="1.5s" />\n', body)
+    # Collapse all whitespace (line breaks, extra spaces) into single spaces
+    prose = re.sub(r"\s+", " ", body).strip()
 
-    return f'{intro}\n<break time="2.0s" />\n{body}'
+    return f"{intro}\n\n{prose}"
 
 
 def char_count(poem):
