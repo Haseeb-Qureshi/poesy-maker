@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Poesy — Voice Audition</title>
+    <link>https://Haseeb-Qureshi.github.io/poesy-maker</link>
+    <description>Listen to 3 voices reading Ithaca. Pick your favorite.</description>
+    <itunes:explicit>no</itunes:explicit>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 08 Feb 2026 13:31:01 +0000</lastBuildDate>
+    <itunes:author>Poesy Maker</itunes:author>
+    <dc:creator>Poesy Maker</dc:creator>
+    <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
+    <itunes:category text="Arts">
+      <itunes:category text="Books"/>
+    </itunes:category>
+    <item>
+      <title>Ithaca — Brian — Deep, Resonant, Comforting</title>
+      <description><![CDATA[Ithaca by Constantine P. Cavafy, read by Brian]]></description>
+      <guid isPermaLink="false">https://Haseeb-Qureshi.github.io/poesy-maker/output/audio/audition-ithaca-brian.mp3</guid>
+      <enclosure url="https://Haseeb-Qureshi.github.io/poesy-maker/output/audio/audition-ithaca-brian.mp3" length="1588047" type="audio/mpeg"/>
+      <itunes:duration>01:39</itunes:duration>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ithaca — Eric — Smooth, Trustworthy</title>
+      <description><![CDATA[Ithaca by Constantine P. Cavafy, read by Eric]]></description>
+      <guid isPermaLink="false">https://Haseeb-Qureshi.github.io/poesy-maker/output/audio/audition-ithaca-eric.mp3</guid>
+      <enclosure url="https://Haseeb-Qureshi.github.io/poesy-maker/output/audio/audition-ithaca-eric.mp3" length="1546208" type="audio/mpeg"/>
+      <itunes:duration>01:36</itunes:duration>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ithaca — Bill — Wise, Mature, Balanced</title>
+      <description><![CDATA[Ithaca by Constantine P. Cavafy, read by Bill]]></description>
+      <guid isPermaLink="false">https://Haseeb-Qureshi.github.io/poesy-maker/output/audio/audition-ithaca-bill.mp3</guid>
+      <enclosure url="https://Haseeb-Qureshi.github.io/poesy-maker/output/audio/audition-ithaca-bill.mp3" length="1878817" type="audio/mpeg"/>
+      <itunes:duration>01:57</itunes:duration>
+      <pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

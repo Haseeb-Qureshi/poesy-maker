@@ -1,7 +1,7 @@
 import os
 from datetime import datetime, timedelta, timezone
 
-from podgen import Category, Episode, Media, Podcast
+from podgen import Category, Episode, Media, Person, Podcast
 
 from config import (
     AUDIO_DIR,
@@ -27,7 +27,7 @@ def generate_feed(poems):
         name=PODCAST_TITLE,
         description=PODCAST_DESCRIPTION,
         language=PODCAST_LANGUAGE,
-        authors=[{"name": PODCAST_AUTHOR}],
+        authors=[Person(PODCAST_AUTHOR)],
         website=GITHUB_PAGES_BASE_URL,
         category=Category(PODCAST_CATEGORY, PODCAST_SUBCATEGORY),
         explicit=False,
