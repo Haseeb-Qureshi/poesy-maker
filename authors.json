@@ -1,0 +1,12 @@
+{
+  "_comment": "Manual author overrides keyed by poem slug. Use when parser cannot detect the author.",
+  "overrides": {
+    "every-day": "Ingeborg Bachmann",
+    "a-man-doesn-t-have-time-in-his-life": "Yehuda Amichai",
+    "jesus-dies": "Anne Sexton",
+    "here-i-love-you": "Pablo Neruda",
+    "five-a-m-in-the-pinewoods": "Mary Oliver",
+    "how-to-like-it": "Stephen Dobyns",
+    "o-my-lord-the-stars-glitter": "Rabia al-Basri"
+  }
+}

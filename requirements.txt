@@ -1,0 +1,5 @@
+elevenlabs>=1.0
+requests>=2.31
+mutagen>=1.47
+podgen>=1.1
+python-dotenv>=1.0
