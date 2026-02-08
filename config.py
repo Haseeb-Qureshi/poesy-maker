@@ -20,8 +20,8 @@ GOOGLE_DOC_EXPORT_URL = (
 # ElevenLabs
 ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY", "")
 ELEVENLABS_MODEL = "eleven_multilingual_v2"
-# Daniel — British, deep male voice, good for dramatic poetry
-ELEVENLABS_VOICE_ID = "onwK4e9ZLuTAKqWW03F9"
+# Brian — Deep, Resonant and Comforting, American male
+ELEVENLABS_VOICE_ID = "nPczCjzI2devNBz1zQrb"
 
 # Podcast metadata
 PODCAST_TITLE = "Poesy"
