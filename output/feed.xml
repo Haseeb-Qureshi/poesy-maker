@@ -8,13 +8,21 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Feb 2026 14:14:37 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Feb 2026 14:37:33 +0000</lastBuildDate>
     <itunes:author>Poesy Maker</itunes:author>
     <dc:creator>Poesy Maker</dc:creator>
-    <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 11 Apr 2025 00:00:00 +0000</pubDate>
     <itunes:category text="Arts">
       <itunes:category text="Books"/>
     </itunes:category>
+    <item>
+      <title>We Lived Happily During the War (prose flow test)</title>
+      <description><![CDATA[Same poem, no line breaks — compare to episode #2]]></description>
+      <guid isPermaLink="false">https://haseebq.com/poesy-maker/output/audio/test-prose-we-lived-happily.mp3</guid>
+      <enclosure url="https://haseebq.com/poesy-maker/output/audio/test-prose-we-lived-happily.mp3" length="543794" type="audio/mpeg"/>
+      <itunes:duration>00:33</itunes:duration>
+      <pubDate>Fri, 11 Apr 2025 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>There was earth inside them</title>
       <description><![CDATA[There was earth inside them by Paul Celan]]></description>
