@@ -31,12 +31,8 @@ PODCAST_LANGUAGE = "en"
 PODCAST_CATEGORY = "Arts"
 PODCAST_SUBCATEGORY = "Books"
 
-# GitHub Pages
-GITHUB_USERNAME = "Haseeb-Qureshi"
-GITHUB_REPO = "poesy-maker"
-GITHUB_PAGES_BASE_URL = (
-    f"https://{GITHUB_USERNAME}.github.io/{GITHUB_REPO}"
-)
+# GitHub Pages (custom domain via haseebq.com)
+GITHUB_PAGES_BASE_URL = "https://haseebq.com/poesy-maker"
 
 # TTS settings
 TTS_RATE_LIMIT_SECONDS = 1.0
