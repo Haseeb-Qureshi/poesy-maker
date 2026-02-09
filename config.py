@@ -37,3 +37,6 @@ GITHUB_PAGES_BASE_URL = "https://haseebq.com/poesy-maker"
 # TTS settings
 TTS_RATE_LIMIT_SECONDS = 1.0
 TTS_MAX_RETRIES = 3
+
+# Audio post-processing
+SILENCE_PADDING_SECONDS = 3

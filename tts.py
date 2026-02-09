@@ -1,5 +1,7 @@
 import os
 import re
+import subprocess
+import tempfile
 import time
 from pathlib import Path
 
@@ -12,6 +14,7 @@ from config import (
     ELEVENLABS_API_KEY,
     ELEVENLABS_MODEL,
     ELEVENLABS_VOICE_ID,
+    SILENCE_PADDING_SECONDS,
     TTS_MAX_RETRIES,
     TTS_RATE_LIMIT_SECONDS,
 )
@@ -75,11 +78,49 @@ def generate_audio(poem, force=False):
             else:
                 raise
 
+    # Append silence so poems don't run into each other on playlists
+    if SILENCE_PADDING_SECONDS > 0:
+        _pad_with_silence(output_path, SILENCE_PADDING_SECONDS)
+
     # Tag the MP3 with ID3 metadata
     _tag_mp3(output_path, poem)
 
     print(f'  Generated {poem["slug"]}.mp3 ({len(audio_bytes)} bytes)')
     return output_path
+
+
+def _pad_with_silence(path, seconds):
+    """Append silence to the end of an MP3 using ffmpeg concat (no re-encoding)."""
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmpdir = Path(tmpdir)
+        silence = tmpdir / "silence.mp3"
+        concat_list = tmpdir / "concat.txt"
+        padded = tmpdir / "padded.mp3"
+
+        # Generate silence at matching sample rate
+        subprocess.run(
+            [
+                "ffmpeg", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono",
+                "-t", str(seconds), "-c:a", "libmp3lame", "-b:a", "128k",
+                "-y", str(silence),
+            ],
+            capture_output=True, check=True,
+        )
+
+        # Concatenate original + silence (lossless stream copy)
+        concat_list.write_text(
+            f"file '{path.resolve()}'\nfile '{silence.resolve()}'\n"
+        )
+        subprocess.run(
+            [
+                "ffmpeg", "-f", "concat", "-safe", "0",
+                "-i", str(concat_list), "-c", "copy", "-y", str(padded),
+            ],
+            capture_output=True, check=True,
+        )
+
+        # Replace original with padded version
+        padded.replace(path)
 
 
 def _tag_mp3(path, poem):
