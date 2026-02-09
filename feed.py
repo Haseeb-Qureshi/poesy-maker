@@ -37,6 +37,7 @@ def generate_feed(poems, season=None):
         description=PODCAST_DESCRIPTION,
         language=PODCAST_LANGUAGE,
         authors=[Person(PODCAST_AUTHOR)],
+        owner=Person(PODCAST_AUTHOR, "noreply@haseebq.com"),
         website=GITHUB_PAGES_BASE_URL,
         category=Category(PODCAST_CATEGORY, PODCAST_SUBCATEGORY),
         image=f"{GITHUB_PAGES_BASE_URL}/output/cover.png",
