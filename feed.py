@@ -17,14 +17,23 @@ from config import (
 from tts import get_mp3_duration
 
 
-def generate_feed(poems):
+def generate_feed(poems, season=None):
     """Generate an RSS podcast feed from existing MP3 files.
 
     Creates one episode per poem with staggered publication dates so
     episodes appear in order in podcast apps.
+
+    If season is specified, only include poems from that season.
     """
+    if season is not None:
+        poems = [p for p in poems if p.get("season") == season]
+
+    name = PODCAST_TITLE
+    if season is not None:
+        name = f"{PODCAST_TITLE} — Season {season}"
+
     podcast = Podcast(
-        name=PODCAST_TITLE,
+        name=name,
         description=PODCAST_DESCRIPTION,
         language=PODCAST_LANGUAGE,
         authors=[Person(PODCAST_AUTHOR)],
@@ -64,5 +73,6 @@ def generate_feed(poems):
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     feed_path = OUTPUT_DIR / "feed.xml"
     podcast.rss_file(str(feed_path))
-    print(f"Generated feed with {episodes_added} episodes at {feed_path}")
+    label = f"season {season}" if season else "all poems"
+    print(f"Generated feed with {episodes_added} episodes ({label}) at {feed_path}")
     return feed_path

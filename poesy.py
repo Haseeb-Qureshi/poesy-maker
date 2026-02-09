@@ -28,7 +28,8 @@ def cmd_list(args):
     for p in poems:
         author = p["author"] or "(unknown)"
         chars = char_count(p)
-        print(f'  {p["index"]:2d}. {p["title"]} — {author} ({chars} chars) [{p["slug"]}]')
+        season = p.get("season", "?")
+        print(f'  S{season} | {p["index"]:2d}. {p["title"]} — {author} ({chars} chars) [{p["slug"]}]')
     print(f"\n  {len(poems)} poems total")
 
 
@@ -64,7 +65,7 @@ def cmd_generate(args):
 def cmd_feed(args):
     """Generate the podcast RSS feed."""
     poems = load_poems()
-    generate_feed(poems)
+    generate_feed(poems, season=args.season)
 
 
 def cmd_all(args):
@@ -72,6 +73,8 @@ def cmd_all(args):
     cmd_fetch(args)
     cmd_generate(args)
     if not args.dry_run:
+        if not hasattr(args, "season"):
+            args.season = None
         cmd_feed(args)
     else:
         print("\n(Skipping feed generation in dry-run mode)")
@@ -102,7 +105,10 @@ def main():
     )
 
     # feed
-    subparsers.add_parser("feed", help="Generate RSS podcast feed")
+    feed_parser = subparsers.add_parser("feed", help="Generate RSS podcast feed")
+    feed_parser.add_argument(
+        "--season", type=int, help="Only include poems from this season"
+    )
 
     # all
     all_parser = subparsers.add_parser("all", help="Run full pipeline")
@@ -114,6 +120,9 @@ def main():
     )
     all_parser.add_argument(
         "--poem", help="Generate one poem (by slug or title substring)"
+    )
+    all_parser.add_argument(
+        "--season", type=int, help="Only include poems from this season in feed"
     )
 
     args = parser.parse_args()
