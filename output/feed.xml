@@ -8,10 +8,10 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Feb 2026 11:24:14 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Feb 2026 11:28:42 +0000</lastBuildDate>
     <itunes:author>Poesy Maker</itunes:author>
     <dc:creator>Poesy Maker</dc:creator>
-    <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
     <itunes:category text="Arts">
       <itunes:category text="Books"/>
     </itunes:category>
@@ -83,8 +83,8 @@
       <title>Jesus Dies</title>
       <description><![CDATA[Jesus Dies by Anne Sexton]]></description>
       <guid isPermaLink="false">https://haseebq.com/poesy-maker/output/audio/jesus-dies.mp3</guid>
-      <enclosure url="https://haseebq.com/poesy-maker/output/audio/jesus-dies.mp3" length="1220483" type="audio/mpeg"/>
-      <itunes:duration>01:16</itunes:duration>
+      <enclosure url="https://haseebq.com/poesy-maker/output/audio/jesus-dies.mp3" length="1198526" type="audio/mpeg"/>
+      <itunes:duration>01:14</itunes:duration>
       <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -139,8 +139,8 @@
       <title>Forgetfulness</title>
       <description><![CDATA[Forgetfulness by Billy Collins]]></description>
       <guid isPermaLink="false">https://haseebq.com/poesy-maker/output/audio/forgetfulness.mp3</guid>
-      <enclosure url="https://haseebq.com/poesy-maker/output/audio/forgetfulness.mp3" length="1290282" type="audio/mpeg"/>
-      <itunes:duration>01:20</itunes:duration>
+      <enclosure url="https://haseebq.com/poesy-maker/output/audio/forgetfulness.mp3" length="1279279" type="audio/mpeg"/>
+      <itunes:duration>01:19</itunes:duration>
       <pubDate>Thu, 16 Jan 2025 00:00:00 +0000</pubDate>
     </item>
     <item>
@@ -166,6 +166,22 @@
       <enclosure url="https://haseebq.com/poesy-maker/output/audio/when-death-comes.mp3" length="1241381" type="audio/mpeg"/>
       <itunes:duration>01:17</itunes:duration>
       <pubDate>Sun, 19 Jan 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Affirmation</title>
+      <description><![CDATA[Affirmation by Donald Hall]]></description>
+      <guid isPermaLink="false">https://haseebq.com/poesy-maker/output/audio/affirmation.mp3</guid>
+      <enclosure url="https://haseebq.com/poesy-maker/output/audio/affirmation.mp3" length="971350" type="audio/mpeg"/>
+      <itunes:duration>01:00</itunes:duration>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Church Going</title>
+      <description><![CDATA[Church Going by Philip Larkin]]></description>
+      <guid isPermaLink="false">https://haseebq.com/poesy-maker/output/audio/church-going.mp3</guid>
+      <enclosure url="https://haseebq.com/poesy-maker/output/audio/church-going.mp3" length="3086667" type="audio/mpeg"/>
+      <itunes:duration>03:12</itunes:duration>
+      <pubDate>Tue, 21 Jan 2025 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
