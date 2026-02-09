@@ -8,13 +8,14 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-podgen v1.1.0 https://podgen.readthedocs.org</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Feb 2026 11:37:40 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Feb 2026 15:00:46 +0000</lastBuildDate>
     <itunes:author>Poesy Maker</itunes:author>
     <dc:creator>Poesy Maker</dc:creator>
     <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
     <itunes:category text="Arts">
       <itunes:category text="Books"/>
     </itunes:category>
+    <itunes:image href="https://haseebq.com/poesy-maker/output/cover.png"/>
     <item>
       <title>We Lived Happily During the War</title>
       <description><![CDATA[We Lived Happily During the War by Ilya Kaminsky]]></description>

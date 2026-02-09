@@ -39,6 +39,7 @@ def generate_feed(poems, season=None):
         authors=[Person(PODCAST_AUTHOR)],
         website=GITHUB_PAGES_BASE_URL,
         category=Category(PODCAST_CATEGORY, PODCAST_SUBCATEGORY),
+        image=f"{GITHUB_PAGES_BASE_URL}/output/cover.png",
         explicit=False,
     )
 
